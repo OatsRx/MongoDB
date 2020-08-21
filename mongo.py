@@ -36,9 +36,8 @@ coll = conn[DATABASE][COLLECTION]
 # Variable 'documents' will find all items from our celeb DB this will
 # return a mongDB object aka a cursor which we need to iterate over in
 # order to unpackage it
-coll.update_one({"nationality": "american"}, {"$set": {"hair_color": "maroon"}})
 
-documents = coll.find({"nationality": "american"})
+documents = coll.find()
 
 for doc in documents:
     print(doc)
